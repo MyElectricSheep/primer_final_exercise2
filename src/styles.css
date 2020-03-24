@@ -1,0 +1,229 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#catlogo {
+  width: 20%;
+}
+
+#logo-text {
+  font-family: Oswald, sans-serif;
+  font-size: 1.2em;
+  padding-left: 0.2em;
+}
+
+#navbar-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  border: 3px solid black;
+  text-align: center;
+}
+
+nav a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+nav a:not(:first-child) {
+  padding-left: 3em;
+}
+
+#footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background-color: black;
+  border: 3px solid black;
+  text-align: center;
+}
+
+footer a {
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+footer a:not(:first-child) {
+  padding-left: 3em;
+}
+
+#copyright {
+  flex-basis: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+footer > div > p {
+  color: white;
+}
+
+#pawprint {
+  width: 2.2%;
+  height: 100%;
+  padding: 0 0.3em 0 0.3em;
+}
+
+#main-container {
+  padding: 1em 0 1em 0;
+  display: flex;
+}
+
+#sidenav {
+  border: 2px solid black;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidenav a {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
+
+#sidenav a:last-child {
+  padding-bottom: 0.5em;
+}
+
+#article-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+  flex-grow: 1;
+}
+
+.article {
+  display: flex;
+}
+
+.article:not(:last-child) {
+  padding-bottom: 1em;
+}
+
+.article-picture {
+  width: 100%;
+  max-width: 350px;
+  max-height: 300px;
+  margin-right: 1em;
+  border: 3px solid black;
+  border-radius: 15px;
+  align-self: center;
+}
+
+.article-picture:nth-child(even) {
+  margin-left: 1em;
+  margin-right: 0em;
+}
+
+.article-title {
+  margin-top: 0em;
+  text-decoration: underline;
+}
+
+.article-text {
+  margin-top: 0em;
+  text-align: justify;
+}
+
+@media (max-width: 1024px) {
+  .article {
+    align-items: center;
+  }
+
+  .article:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  #sidenav {
+    display: none;
+  }
+
+  .article-title {
+    text-align: center;
+  }
+
+  #article-container {
+    padding-left: 0em;
+  }
+
+  .article {
+    flex-direction: column;
+  }
+
+  .article-picture {
+    margin-right: 0em;
+    margin-bottom: 1em;
+  }
+
+  .article-picture:nth-child(even) {
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+
+  #footer-section {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 450px) {
+  #navbar-section {
+    flex-direction: column;
+  }
+  nav a {
+    text-align: center;
+  }
+  nav a:not(:first-child) {
+    padding-left: 0em;
+    padding-top: 0.5em;
+  }
+  #footer-section {
+    flex-direction: column;
+  }
+  footer a:not(:first-child) {
+    padding-left: 0em;
+    padding-top: 0.5em;
+  }
+  #copyright {
+    flex-direction: column;
+  }
+  #pawprint {
+    width: 5%;
+    padding: 0 0 0 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  #pawprint {
+    width: 1.8%;
+    max-width: 20px;
+  }
+}
+
+#konami {
+  margin-top: -0.5em;
+  color: grey;
+  font-size: 0.6em;
+}
